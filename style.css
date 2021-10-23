@@ -1,7 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root {
+  --StrongCyan: hsl(171, 66%, 44%);
+  --LightBlue: hsl(233, 100%, 69%);
+  --DarkGrayishBlue: hsl(210, 10%, 33%);
+  --GrayishBlue: hsl(201, 11%, 66%);
+}
+
+* {
+  font-family: 'Bai Jamjuree', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  min-height: 100vh;
+  background-image: url(images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  text-align: center;
+}
+.logo {
+  padding: 100px 0;
+}
+.header-description {
+  width: 80%;
+  margin: 0 auto;
+}
+.header-description > h1 {
+  color: var(--DarkGrayishBlue);
+  margin: 10px 0;
+  margin-top: -20px;
+}
+.header-description > p {
+  color: var(--GrayishBlue);
+  margin: 15px 0;
+}
+.cta-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+.btn {
+  width: 80%;
+  max-width: 200px;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+
+  cursor: pointer;
+}
+.ios-btn {
+  background-color: var(--StrongCyan);
+  box-shadow: 0px 3px hsl(171, 65%, 37%);
+}
+.mac-btn {
+  background-color: var(--LightBlue);
+  box-shadow: 0px 3px hsl(233, 65%, 59%);
+}
+
+section {
+  width: 80%;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.feature-top {
+  margin: 20px 0;
+}
+.feature-top > h2 {
+  color: var(--DarkGrayishBlue);
+  margin: 10px 0;
+}
+.feature-top > p {
+  color: var(--GrayishBlue);
+  margin: 15px 0;
+}
+
+.feature-img > img {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.feature {
+  margin: 30px 0;
+}
+.feature > h3 {
+  color: var(--DarkGrayishBlue);
+  margin: 10px 0;
+  font-size: 20px;
+}
+.feature > p {
+  color: var(--GrayishBlue);
+}
+
+.details {
+  margin: 50px 0;
+}
+.detail {
+  margin: 50px 0;
+}
+
+.detail > h3 {
+  margin: 5px 0;
+  color: var(--DarkGrayishBlue);
+}
+.detail > p {
+  color: var(--GrayishBlue);
+}
+
+.sponsors {
+  margin: 120px auto;
+}
+
+.sponsor {
+  margin: 50px 0;
+}
+
+footer {
+  background-color: #f5f6f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-logo > img {
+  width: 60px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.footer-nav > a {
+  margin: 15px 0;
+  text-decoration: none;
+}
+.social-icons {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.social-icons > a {
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.attribution-section {
+  background-color: #f5f6f8;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 999px) {
+  header {
+    background-image: url(images/bg-header-desktop.png);
+  }
+  section {
+    width: 90%;
+  }
+  .cta-btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 50px auto;
+  }
+  .feature-section {
+    display: grid;
+    grid-template-areas:
+      'f-top f-top'
+      'img feature';
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+  }
+  .feature-top {
+    grid-area: f-top;
+  }
+  .feature-img {
+    grid-area: img;
+  }
+  .features {
+    grid-area: feature;
+    text-align: left;
+  }
+  .details {
+    display: grid;
+    grid-template-areas: 'd1 d2 d3';
+    column-gap: 20px;
+  }
+  .detail > img {
+    height: 40px;
+    width: 50px;
+    margin: 30px 0;
+  }
+  .sponsors {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .feature-top {
+    width: 60%;
+    margin: 0 auto;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 0;
+  }
+  .footer-logo > img {
+    margin: 0;
+  }
+  .footer-nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-nav > a {
+    margin: 10px;
+  }
+  .social-icons {
+    margin: 0;
+  }
 }
